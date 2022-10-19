@@ -1,0 +1,413 @@
+/*style sheet for 'work.html' page*/
+
+body {
+  margin: auto;
+  background-size: contain;
+  /* background-image: url("/images/lined-pattern-bg.png"); */
+  background-repeat: no-repeat;
+  background: hsla(291, 79%, 51%, 1);
+  background: linear-gradient(90deg, hsla(291, 79%, 51%, 1) 0%, hsla(240, 91%, 73%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(291, 79%, 51%, 1) 0%, hsla(240, 91%, 73%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(291, 79%, 51%, 1) 0%, hsla(240, 91%, 73%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C621E5", endColorstr="#7D7CF9", GradientType=1 );
+
+}
+
+ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+h1 {
+  font-size: 1.9rem;
+  color: blue;
+  text-shadow: 1px 1px 2px rgb(132, 132, 132);
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+
+
+h6 {
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 0.2rem;
+  padding: 0.2rem;
+}
+
+hr {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+
+.navbar {
+  font-size: larger;
+  font-weight: 600;
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color:white;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+  color: white;
+}
+
+/*---------------------------------------------------Left Column--------------------------------------------------------------------*/
+
+
+.portrait {
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 50%; 
+}
+
+/*social media icons at the top of left column*/
+
+.social-icons-top a {
+  color:blue;
+  text-shadow: 1px 1px 2px rgb(132, 132, 132);
+}
+
+.social-icons-top i:hover {
+  transform: scale(1.6);
+  transition: 0.5s;
+  text-shadow: 1px 1px 2px rgb(132, 132, 132);
+  
+}
+
+
+/*--------------SKILLS SECTION--------------*/
+
+/*Job role*/
+.center-text {
+text-align: center;
+}
+
+.fa-brands {
+padding: 9px;
+font-size: 1.5rem;
+
+}
+
+/* "skills" icons*/
+.fa-solid {
+  padding: 11px;
+}
+
+.fa-solid, .fa-figma, .fa-html5, .fa-css3-alt, .fa-js-square {
+  color:grey;
+  font-size: 3rem;
+}
+
+.none {
+  display: inline;
+}
+
+i:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+  color: blue;
+  text-shadow: 1px 1px 2px rgb(132, 132, 132);
+}
+
+
+/*---------------------------------------------------Right Column--------------------------------------------------------------------*/
+
+ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  /* padding-bottom: 4px;
+  padding-top: 18px; */
+}
+ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+ul li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+ul li:last-of-type {
+  padding-bottom: 0;
+}
+ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  right: 0;
+}
+ul li i:before, ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: blue;
+  width: 3px;
+  height: 9px;
+}
+ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  margin:2px;
+}
+ul li input[type=checkbox]:checked ~ p {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+  margin:2px;
+}
+ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotateX(8deg);
+  }
+  83% {
+    transform: rotateX(6deg);
+  }
+  92% {
+    transform: rotateX(-3deg);
+  }
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
+
+
+.col {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+/*containers for each section*/
+#bio-skills {
+background-color: white;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px;
+/* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+}
+
+#bio-skills p {
+  display: inline;
+  }
+
+#skill-badges {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#work-history {
+background-color: white;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#work-history h2 {
+  color: black;
+  font-size: 1.5rem;
+  
+}
+
+
+.job-title {
+font-size: larger;
+line-height: normal;
+  /* padding: 5px; */
+}
+
+
+.job-dates {
+  color: gray;
+}
+
+#education, h1 {
+background-color: white;
+}
+
+#education {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/*view transcript button*/
+/* From uiverse.io by @alexmaracinaru */
+button.transcript {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Helvetica,"sans-serif";
+  transition: all .5s;
+  padding: 5px 20px;
+  border-radius: 100px;
+  background: #a483e6;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+button.transcript:hover {
+  background: blue;
+  color: white;
+}
+
+button.transcript > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform .3s ease-in-out;
+}
+
+button.transcript:hover svg {
+  transform: translateX(5px);
+}
+
+button.transcript:active {
+  transform: scale(0.95);
+}
+
+
+/*--------------------------------------------------FOOTER----------------------------------------------------------*/
+.footer-basic {
+  padding:40px 0;
+  color:#4b4c4d;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+  
+}
+
+.footer-basic .social-icons-footer {
+  text-align:center;
+  padding-bottom:25px;
+
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:white;
+  margin-bottom:0;
+} 
+
+/*Footer links (home projects work contact*/
+.hover_effect {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: inline;
+  width: 100%;
+  padding: 1px;
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  color: blue;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: larger;
+  font-weight: 600;
+  -webkit-user-select: none;
+-webkit-touch-callout: none;  
+}
+
+.hover_effect:after {
+  content: "";
+  height: 5px;
+  left: 0;
+  width: 1px;
+  position: absolute;
+  -webkit-transition: width 1s ease, background-color 1s ease;
+  -moz-transition: width 1s ease, background-color 1s ease;;
+  -ms-transition: width 1s ease, background-color 1s ease;;
+  -o-transition: width 1s ease, background-color 1s ease;;
+  transition: width 1s ease, background-color 1s ease;;
+  right: 0;
+  margin: 0 auto;
+}
+
+.hover_effect:hover {
+  color: #fff;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  -ms-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  transition: color 1s ease;
+  cursor: pointer;
+}
+
+/*line above the text links, contact, home ect*/
+.hover_effect:hover:after, 
+.hover_effect:focus:after{
+  width: 100%;
+  background-color: #7FFFD4;
+}
+
+/*Icons highlight on hover and scale up*/
+.social-icons-footer i:hover {
+  color: #7FFFD4;
+  transition: 0.4s;
+  transform: scale(1.6);
+  text-shadow: 1px 1px 2px rgb(132, 132, 132);
+}
+/*hover effect for text links*/
+a:hover {
+  color:#7FFFD4;
+  transition: 0.4s;
+  text-shadow: 1px 1px 2px rgb(132, 132, 132);
+}
+
+a {
+  color: white;
+  padding-top: 0.2em;
+}
+
+
+/* .social a {
+  color:white;
+} */
+
+
