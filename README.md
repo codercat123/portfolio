@@ -1,7 +1,7 @@
 # Portfolio
 
 Description:
-My portfolio project with a 3d theme
+My portfolio project with a 3d theme,
 Languages: HTML, CSS, JAVASCRIPT
 
 ### **Homepage**
